@@ -1,0 +1,601 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tienda de Suplementos Deportivos">
+	<!-- Header -->
+	<header class="bg-black text-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between h-16">
+				<!-- Logo -->
+				<div class="flex-shrink-0">
+					<img src="/images/logo.png" alt="SUPLEMENTOS PRO" class="h-12 w-auto" />
+				</div>
+				
+				<!-- Navigation -->
+				<nav class="hidden md:block">
+					<ul class="flex space-x-8">
+						<li><a href="/productos" class="hover:text-yellow-400 transition">Productos</a></li>
+						<li><a href="/ofertas" class="hover:text-yellow-400 transition">Ofertas</a></li>
+						<li><a href="/marcas" class="hover:text-yellow-400 transition">Marcas</a></li>
+						<li><a href="/objetivos" class="hover:text-yellow-400 transition">Objetivos</a></li>
+						<li><a href="/autenticidad" class="hover:text-yellow-400 transition">Autenticidad</a></li>
+						<li><a href="/blog" class="hover:text-yellow-400 transition">Blog</a></li>
+					</ul>
+				</nav>
+				
+				<!-- Search Bar -->
+				<div class="hidden lg:block flex-1 max-w-md mx-8">
+					<form class="relative">
+						<input 
+							type="search" 
+							placeholder="Buscar proteínas, creatina, vitaminas..." 
+							class="w-full bg-gray-800 text-white px-4 py-2 pr-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:bg-gray-700 transition"
+						>
+						<button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 hover:text-yellow-400 transition">
+							<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+							</svg>
+						</button>
+					</form>
+				</div>
+				
+				<!-- Cart and User -->
+				<div class="flex items-center space-x-4">
+					<button class="hover:text-yellow-400 transition">
+						<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+						</svg>
+					</button>
+					<a href="/carrito" class="hover:text-yellow-400 transition relative">
+						<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+						</svg>
+						<span class="absolute -top-2 -right-2 bg-yellow-400 text-black text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+					</a>
+				</div>
+				
+				<!-- Mobile menu button -->
+				<button class="md:hidden">
+					<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<!-- Hero Section -->
+		<section class="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-20">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6">TU TIENDA DE SUPLEMENTOS DEPORTIVOS</h1>
+				<p class="text-xl mb-8">Los mejores productos para alcanzar tus metas fitness</p>
+				<button class="bg-yellow-400 text-black font-bold py-3 px-8 rounded hover:bg-yellow-300 transition">Ver Productos</button>
+			</div>
+		</section>
+
+		<!-- Categorías Principales -->
+		<section class="py-16 bg-gray-100">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-center mb-12">CATEGORÍAS</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+						<div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+							</svg>
+						</div>
+						<h3 class="font-bold text-xl mb-2">Proteínas</h3>
+						<p class="text-gray-600">Whey, Caseína, Veganas</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+						<div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+						</div>
+						<h3 class="font-bold text-xl mb-2">Pre-Entrenos</h3>
+						<p class="text-gray-600">Energía y Rendimiento</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+						<div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+							</svg>
+						</div>
+						<h3 class="font-bold text-xl mb-2">Creatina</h3>
+						<p class="text-gray-600">Fuerza y Masa Muscular</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+						<div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+							</svg>
+						</div>
+						<h3 class="font-bold text-xl mb-2">Vitaminas</h3>
+						<p class="text-gray-600">Salud y Bienestar</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Blog -->
+		<section class="py-8 bg-gradient-to-r from-blue-50 to-purple-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<div class="flex items-center justify-center space-x-2 mb-2">
+					<svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+					</svg>
+					<h3 class="text-lg font-semibold text-gray-800">¿No sabes qué suplemento elegir?</h3>
+				</div>
+				<p class="text-gray-600 mb-4">Lee nuestras guías expertas y toma decisiones informadas para alcanzar tus objetivos</p>
+				<a href="#blog" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition">
+					Explorar guías y consejos
+					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+				</a>
+			</div>
+		</section>
+
+		<!-- Productos Destacados -->
+		<section class="py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-center mb-12">PRODUCTOS DESTACADOS</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+						<a href="/producto" class="block">
+							<div class="h-48 bg-gray-200 flex items-center justify-center">
+								<span class="text-gray-400">[IMAGEN]</span>
+							</div>
+						</a>
+						<div class="p-4">
+							<a href="/producto" class="block hover:text-blue-600 transition">
+								<h4 class="font-bold text-lg mb-2">Whey Protein Gold</h4>
+							</a>
+							<p class="text-2xl font-bold text-blue-600 mb-3">$49.99</p>
+							<button class="w-full bg-green-500 text-white font-bold py-2 rounded hover:bg-green-600 transition">Agregar al Carrito</button>
+						</div>
+					</div>
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+						<a href="/producto" class="block">
+							<div class="h-48 bg-gray-200 flex items-center justify-center">
+								<span class="text-gray-400">[IMAGEN]</span>
+							</div>
+						</a>
+						<div class="p-4">
+							<a href="/producto" class="block hover:text-blue-600 transition">
+								<h4 class="font-bold text-lg mb-2">Pre-Workout Extreme</h4>
+							</a>
+							<p class="text-2xl font-bold text-blue-600 mb-3">$39.99</p>
+							<button class="w-full bg-green-500 text-white font-bold py-2 rounded hover:bg-green-600 transition">Agregar al Carrito</button>
+						</div>
+					</div>
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+						<a href="/producto" class="block">
+							<div class="h-48 bg-gray-200 flex items-center justify-center">
+								<span class="text-gray-400">[IMAGEN]</span>
+							</div>
+						</a>
+						<div class="p-4">
+							<a href="/producto" class="block hover:text-blue-600 transition">
+								<h4 class="font-bold text-lg mb-2">Creatina Monohidrato</h4>
+							</a>
+							<p class="text-2xl font-bold text-blue-600 mb-3">$29.99</p>
+							<button class="w-full bg-green-500 text-white font-bold py-2 rounded hover:bg-green-600 transition">Agregar al Carrito</button>
+						</div>
+					</div>
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+						<a href="/producto" class="block">
+							<div class="h-48 bg-gray-200 flex items-center justify-center">
+								<span class="text-gray-400">[IMAGEN]</span>
+							</div>
+						</a>
+						<div class="p-4">
+							<a href="/producto" class="block hover:text-blue-600 transition">
+								<h4 class="font-bold text-lg mb-2">BCAA 10:1:1</h4>
+							</a>
+							<p class="text-2xl font-bold text-blue-600 mb-3">$34.99</p>
+							<button class="w-full bg-green-500 text-white font-bold py-2 rounded hover:bg-green-600 transition">Agregar al Carrito</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Nuevos Lanzamientos -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-center mb-4">NUEVOS LANZAMIENTOS</h2>
+				<p class="text-center text-gray-600 mb-12">Descubre las últimas innovaciones en suplementación deportiva</p>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition relative">
+						<div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded z-10">NUEVO</div>
+						<a href="/producto" class="block">
+							<div class="h-48 bg-gray-200 flex items-center justify-center">
+								<span class="text-gray-400">[IMAGEN]</span>
+							</div>
+						</a>
+						<div class="p-4">
+							<a href="/producto" class="block hover:text-blue-600 transition">
+								<h4 class="font-bold text-lg mb-2">Mass Gainer Pro</h4>
+							</a>
+							<p class="text-2xl font-bold text-blue-600 mb-3">$59.99</p>
+							<button class="w-full bg-green-500 text-white font-bold py-2 rounded hover:bg-green-600 transition">Agregar al Carrito</button>
+						</div>
+					</div>
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition relative">
+						<div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded z-10">NUEVO</div>
+						<a href="/producto" class="block">
+							<div class="h-48 bg-gray-200 flex items-center justify-center">
+								<span class="text-gray-400">[IMAGEN]</span>
+							</div>
+						</a>
+						<div class="p-4">
+							<a href="/producto" class="block hover:text-blue-600 transition">
+								<h4 class="font-bold text-lg mb-2">Glutamina Pure</h4>
+							</a>
+							<p class="text-2xl font-bold text-blue-600 mb-3">$24.99</p>
+							<button class="w-full bg-green-500 text-white font-bold py-2 rounded hover:bg-green-600 transition">Agregar al Carrito</button>
+						</div>
+					</div>
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition relative">
+						<div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded z-10">NUEVO</div>
+						<a href="/producto" class="block">
+							<div class="h-48 bg-gray-200 flex items-center justify-center">
+								<span class="text-gray-400">[IMAGEN]</span>
+							</div>
+						</a>
+						<div class="p-4">
+							<a href="/producto" class="block hover:text-blue-600 transition">
+								<h4 class="font-bold text-lg mb-2">Omega 3 Premium</h4>
+							</a>
+							<p class="text-2xl font-bold text-blue-600 mb-3">$19.99</p>
+							<button class="w-full bg-green-500 text-white font-bold py-2 rounded hover:bg-green-600 transition">Agregar al Carrito</button>
+						</div>
+					</div>
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition relative">
+						<div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded z-10">NUEVO</div>
+						<a href="/producto" class="block">
+							<div class="h-48 bg-gray-200 flex items-center justify-center">
+								<span class="text-gray-400">[IMAGEN]</span>
+							</div>
+						</a>
+						<div class="p-4">
+							<a href="/producto" class="block hover:text-blue-600 transition">
+								<h4 class="font-bold text-lg mb-2">Multivitamínico Sport</h4>
+							</a>
+							<p class="text-2xl font-bold text-blue-600 mb-3">$22.99</p>
+							<button class="w-full bg-green-500 text-white font-bold py-2 rounded hover:bg-green-600 transition">Agregar al Carrito</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Productos por Objetivo -->
+		<section class="py-16 bg-gradient-to-b from-white to-gray-100">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-center mb-4">ENCUENTRA TU OBJETIVO</h2>
+				<p class="text-center text-gray-600 mb-12">Selecciona tu meta y te recomendaremos los mejores productos</p>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border-t-4 border-red-500">
+						<div class="text-center mb-6">
+							<div class="w-24 h-24 bg-red-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+								<svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold mb-2">PERDER PESO</h3>
+							<p class="text-gray-600 mb-4">Quema grasa y define tu cuerpo</p>
+						</div>
+						<ul class="space-y-3 mb-6">
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								Termogénicos
+							</li>
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								L-Carnitina
+							</li>
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								Proteína Isolada
+							</li>
+						</ul>
+						<button class="w-full bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition">Ver Productos</button>
+					</div>
+					<div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border-t-4 border-blue-500">
+						<div class="text-center mb-6">
+							<div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+								<svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold mb-2">GANAR MÚSCULO</h3>
+							<p class="text-gray-600 mb-4">Aumenta tu masa muscular</p>
+						</div>
+						<ul class="space-y-3 mb-6">
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								Mass Gainer
+							</li>
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								Creatina
+							</li>
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								Aminoácidos
+							</li>
+						</ul>
+						<button class="w-full bg-blue-500 text-white font-bold py-3 rounded-lg hover:bg-blue-600 transition">Ver Productos</button>
+					</div>
+					<div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border-t-4 border-green-500">
+						<div class="text-center mb-6">
+							<div class="w-24 h-24 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+								<svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold mb-2">MEJORAR RENDIMIENTO</h3>
+							<p class="text-gray-600 mb-4">Potencia tu entrenamiento</p>
+						</div>
+						<ul class="space-y-3 mb-6">
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								Pre-Workout
+							</li>
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								Beta-Alanina
+							</li>
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								Electrolitos
+							</li>
+						</ul>
+						<button class="w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition">Ver Productos</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Beneficios -->
+		<section class="py-16 bg-gray-100">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-center mb-12">¿POR QUÉ ELEGIRNOS?</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<div class="text-center">
+						<div class="w-16 h-16 bg-yellow-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Envío Gratis</h3>
+						<p class="text-gray-600">En compras mayores a $50</p>
+					</div>
+					<div class="text-center">
+						<div class="w-16 h-16 bg-yellow-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Productos Originales</h3>
+						<p class="text-gray-600">100% Garantizados</p>
+					</div>
+					<div class="text-center">
+						<div class="w-16 h-16 bg-yellow-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Asesoría Nutricional</h3>
+						<p class="text-gray-600">Guía personalizada gratis</p>
+					</div>
+					<div class="text-center">
+						<div class="w-16 h-16 bg-yellow-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"></path>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Devoluciones</h3>
+						<p class="text-gray-600">30 días de garantía</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Blog -->
+		<section id="blog" class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-bold mb-4">GUÍAS Y CONSEJOS DE EXPERTOS</h2>
+					<p class="text-gray-600 max-w-2xl mx-auto">Aprende de nuestros especialistas en nutrición deportiva y descubre cómo maximizar tus resultados con los suplementos adecuados</p>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Artículo 1 -->
+					<article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition">
+						<div class="h-48 bg-gray-300 flex items-center justify-center">
+							<span class="text-gray-500">[IMAGEN BLOG]</span>
+						</div>
+						<div class="p-6">
+							<div class="flex items-center text-sm text-gray-500 mb-3">
+								<span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">GUÍA</span>
+								<span class="ml-3">5 min de lectura</span>
+							</div>
+							<h3 class="text-xl font-bold mb-3">Cómo Elegir la Proteína Perfecta para Tu Objetivo</h3>
+							<p class="text-gray-600 mb-4">Descubre las diferencias entre whey, caseína e isolada, y aprende cuál es la mejor opción según tus metas fitness...</p>
+							<div class="flex items-center justify-between">
+								<a href="#" class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+									Leer más
+									<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</a>
+								<span class="text-sm text-gray-500">12 Ene 2024</span>
+							</div>
+						</div>
+					</article>
+
+					<!-- Artículo 2 -->
+					<article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition">
+						<div class="h-48 bg-gray-300 flex items-center justify-center">
+							<span class="text-gray-500">[IMAGEN BLOG]</span>
+						</div>
+						<div class="p-6">
+							<div class="flex items-center text-sm text-gray-500 mb-3">
+								<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">NUTRICIÓN</span>
+								<span class="ml-3">7 min de lectura</span>
+							</div>
+							<h3 class="text-xl font-bold mb-3">Pre-Entreno vs Café: ¿Cuál Es Mejor para Tu Rendimiento?</h3>
+							<p class="text-gray-600 mb-4">Analizamos las ventajas de cada opción y te ayudamos a decidir qué es lo mejor para potenciar tus entrenamientos...</p>
+							<div class="flex items-center justify-between">
+								<a href="#" class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+									Leer más
+									<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</a>
+								<span class="text-sm text-gray-500">10 Ene 2024</span>
+							</div>
+						</div>
+					</article>
+
+					<!-- Artículo 3 -->
+					<article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition">
+						<div class="h-48 bg-gray-300 flex items-center justify-center">
+							<span class="text-gray-500">[IMAGEN BLOG]</span>
+						</div>
+						<div class="p-6">
+							<div class="flex items-center text-sm text-gray-500 mb-3">
+								<span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">CIENCIA</span>
+								<span class="ml-3">10 min de lectura</span>
+							</div>
+							<h3 class="text-xl font-bold mb-3">La Verdad Sobre la Creatina: Mitos y Realidades</h3>
+							<p class="text-gray-600 mb-4">Desmitificamos las creencias más comunes sobre la creatina con evidencia científica actualizada...</p>
+							<div class="flex items-center justify-between">
+								<a href="#" class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+									Leer más
+									<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</a>
+								<span class="text-sm text-gray-500">8 Ene 2024</span>
+							</div>
+						</div>
+					</article>
+				</div>
+				
+				<!-- CTA Blog completo -->
+				<div class="text-center mt-12">
+					<a href="#" class="inline-flex items-center bg-gray-900 text-white font-bold px-8 py-3 rounded hover:bg-gray-800 transition">
+						Ver Todos los Artículos
+						<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Newsletter -->
+		<section class="py-16 bg-black text-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl font-bold mb-4">SUSCRÍBETE Y AHORRA 10%</h2>
+				<p class="mb-8">Recibe ofertas exclusivas y consejos de nutrición</p>
+				<form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+					<input type="email" placeholder="Tu correo electrónico" class="flex-1 px-4 py-3 rounded text-black border-2 border-white focus:outline-none focus:border-yellow-400">
+					<button type="submit" class="bg-yellow-400 text-black font-bold px-6 py-3 rounded hover:bg-yellow-300 transition">Suscribirse</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="bg-gray-900 text-gray-300">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div>
+					<img src="/images/logo.png" alt="SUPLEMENTOS PRO" class="h-16 w-auto mb-4" />
+					<p class="text-sm mb-4">Tu tienda de confianza para suplementos deportivos de alta calidad.</p>
+				</div>
+				<div>
+					<h4 class="font-bold text-white text-lg mb-4">PRODUCTOS</h4>
+					<ul class="space-y-2">
+						<li><a href="#" class="hover:text-white transition">Proteínas</a></li>
+						<li><a href="#" class="hover:text-white transition">Pre-Entrenos</a></li>
+						<li><a href="#" class="hover:text-white transition">Creatina</a></li>
+						<li><a href="#" class="hover:text-white transition">Vitaminas</a></li>
+					</ul>
+				</div>
+				<div>
+					<h4 class="font-bold text-white text-lg mb-4">AYUDA</h4>
+					<ul class="space-y-2">
+						<li><a href="#" class="hover:text-white transition">Envíos</a></li>
+						<li><a href="#" class="hover:text-white transition">Devoluciones</a></li>
+						<li><a href="#" class="hover:text-white transition">Guía de Tallas</a></li>
+						<li><a href="#" class="hover:text-white transition">FAQ</a></li>
+					</ul>
+				</div>
+				<div>
+					<h4 class="font-bold text-white text-lg mb-4">EMPRESA</h4>
+					<ul class="space-y-2">
+						<li><a href="#" class="hover:text-white transition">Sobre Nosotros</a></li>
+						<li><a href="#" class="hover:text-white transition">Contacto</a></li>
+						<li><a href="#" class="hover:text-white transition">Blog</a></li>
+						<li><a href="#" class="hover:text-white transition">Términos</a></li>
+					</ul>
+				</div>
+				<div>
+					<h4 class="font-bold text-white text-lg mb-4">SÍGUENOS</h4>
+					<div class="flex space-x-4">
+						<a href="#" class="bg-gray-700 p-2 rounded hover:bg-gray-600 transition">
+							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+							</svg>
+						</a>
+						<a href="#" class="bg-gray-700 p-2 rounded hover:bg-gray-600 transition">
+							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
+							</svg>
+						</a>
+						<a href="#" class="bg-gray-700 p-2 rounded hover:bg-gray-600 transition">
+							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+							</svg>
+						</a>
+						<a href="#" class="bg-gray-700 p-2 rounded hover:bg-gray-600 transition">
+							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="border-t border-gray-700 mt-8 pt-8 text-center">
+				<p>&copy; 2024 Tienda de Suplementos. Todos los derechos reservados.</p>
+			</div>
+		</div>
+	</footer>
+</Layout>
