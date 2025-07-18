@@ -1,7 +1,7 @@
 ---
 ---
 
-<header class="sticky top-0 z-40 shadow-xl">
+<header class="sticky top-0 z-40 shadow-xl overflow-x-hidden">
 	<!-- Main Header -->
 	<div class="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,8 +136,8 @@
 	<!-- Categories Menu -->
 	<div class="bg-gray-800 border-t border-gray-700/50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<nav class="hidden md:block">
-				<ul class="flex items-center justify-center">
+			<nav class="hidden md:block overflow-x-auto">
+				<ul class="flex items-center justify-center flex-nowrap">
 					<li class="group">
 						<a href="/productos?categoria=proteinas" 
 						   class="block px-6 py-4 text-gray-300 hover:text-yellow-400 hover:bg-gray-700/30 
@@ -214,20 +214,20 @@
 			</nav>
 			
 			<!-- Quick Links Bar -->
-			<div class="flex items-center justify-center space-x-8 py-2 text-xs border-t border-gray-700/30">
-				<a href="/marcas" class="text-gray-400 hover:text-yellow-400 transition-colors">
+			<div class="hidden md:flex items-center justify-center space-x-4 lg:space-x-8 py-2 text-xs border-t border-gray-700/30">
+				<a href="/marcas" class="text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap">
 					Todas las Marcas
 				</a>
 				<span class="text-gray-600">•</span>
-				<a href="/objetivos" class="text-gray-400 hover:text-yellow-400 transition-colors">
+				<a href="/objetivos" class="text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap">
 					Por Objetivo
 				</a>
 				<span class="text-gray-600">•</span>
-				<a href="/autenticidad" class="text-gray-400 hover:text-yellow-400 transition-colors">
+				<a href="/autenticidad" class="text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap">
 					Garantía de Autenticidad
 				</a>
 				<span class="text-gray-600">•</span>
-				<a href="/productos" class="text-gray-400 hover:text-yellow-400 transition-colors font-medium">
+				<a href="/productos" class="text-gray-400 hover:text-yellow-400 transition-colors font-medium whitespace-nowrap">
 					Ver Todo el Catálogo →
 				</a>
 			</div>
